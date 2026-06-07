@@ -12,29 +12,10 @@ namespace WebApplication1
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 
-            app.UseDefaultFiles(); // ищет index.html
-            app.UseStaticFiles();  // раздает файлы из wwwroot
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
-
-            app.Run(async (context) =>
-            {
-                var path = context.Request.Path;
-                var response = context.Response;
-                response.ContentType = "text/html; charset=utf-8";
-
-                if (path == "/")
-                {
-                    await response.WriteAsync($"<a>Главная страница</a>");
-                }
-                else if (path == "/login")
-                {
-                    await response.WriteAsync($"<a>Страница входа</a>");
-                }
-                else if (path == "/sign")
-                {
-                    await response.WriteAsync($"<a>Страница регистрации</a>");
-                }
-            });
+            app.Run();
 
 
             /*
