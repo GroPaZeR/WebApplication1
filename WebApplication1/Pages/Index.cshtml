@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>this is title</title>
+</head>
+
+<header>
+    <ul class="login_bottom_box">
+            <li> <a href="/Login">Login</a></li>
+            <li> <a href="/Sign">Sign</a></li>
+    </ul>
+</header>
+<body>
+    <main>
+        <h2 class="section_box_title">
+            @Model.Article.title
+        </h2>
+        <!--короче я хуй знает как нужно писать дату, если что поменяешь по нормальному-->
+        <div>
+            @Model.Article.date
+        </div>
+        <div class="section_box_text">
+            <p class="base_section_text">@Model.Article.text</p>
+        </div>
+        
+
+
+    </main>
+        
+</body>
+</html>
