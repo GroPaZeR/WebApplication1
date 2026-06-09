@@ -4,15 +4,6 @@ using System.Text.Json;
 
 namespace ClassLibrary
 {
-    public class User
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Id { get; set; }
-
-    }
     public class News
     {
         public readonly static string newsDataPath = @"NewsDatabase.Json";
