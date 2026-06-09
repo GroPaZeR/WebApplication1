@@ -19,17 +19,7 @@ namespace WebApplication1
 
             app.MapRazorPages();
 
-            News news = new News();
 
-            news.readArticles();
-
-            
-
-            /*
-            string[] data = File.ReadAllLines(userDataPath);
-
-            User[] users = new User[data.Length];
-            */
             app.Run();
         }
     }

@@ -5,13 +5,14 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css">
-    <title>this is title</title>
+    <title>Лента новостей</title>
 </head>
 
 <header>
     <ul class="login_bottom_box">
             <li> <a href="/Login">Login</a></li>
             <li> <a href="/Sign">Sign</a></li>
+            <li> <a href="/AddArticle">Add Article</a></li>
     </ul>
 </header>
 <body>
@@ -20,16 +21,13 @@
             @Model.Article.title
         </h2>
         <!--короче я хуй знает как нужно писать дату, если что поменяешь по нормальному-->
-        <div>
+        <div class="article_date">
             @Model.Article.date
         </div>
-        <div class="section_box_text">
-            <p class="base_section_text">@Model.Article.text</p>
-        </div>
+
+        <!--Вроде -->
+        <p class="base_section_text">@Model.Article.text</p>
         
-
-
     </main>
-        
 </body>
 </html>

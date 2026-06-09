@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Text.Encodings.Web;
 using System.Text.Json;
 
 namespace ClassLibrary
@@ -27,40 +28,40 @@ namespace ClassLibrary
 
             return randomArticle;
         }
-        public void readArticles()
+        public void ReadArticles()
         {
-            string[] jsonarticles = File.ReadAllLines(newsDataPath);
-            for (int i = 0; i < jsonarticles.Length; i++)
-            {
-                articles.Add(JsonSerializer.Deserialize<Article>(jsonarticles[i]));
+            string json = File.ReadAllText(newsDataPath);
 
-            }
+            articles = JsonSerializer.Deserialize<List<Article>>(json)?? new List<Article>();
         }
 
-        public static void writeArticles()
+        public static void WriteArticles(Article article)
         {
-            News news = new News();/*
-            news.articles.Add(new Article()
-            {
-                title = "Кубок Республики Беларусь по мотокроссу  прошел в Иваново",
-                text = "Пыль, жара, рёв моторов и безумные полёты в воздухе. Вот что происходило в Иваново с 1 по 3 мая, когда там прошёл третий этап республиканских соревнований по мотокроссу. Трасса кипела, гонщики сражались за каждую секунду — и у нас есть чем поделиться с теми, кто не смог быть на трибунах.",
-                date = new DateTime(2026, 06, 07)
-            });*/
+            //Читаем данные из json
+            string json = File.ReadAllText(newsDataPath);
+            List<Article> articles = JsonSerializer.Deserialize<List<Article>>(json)
+                       ?? new List<Article>();
 
-            string[] newsasJson = new string[news.articles.Count];
-            for (int i = 0; i < news.articles.Count; i++)
+            //Добавляем новую статью
+            articles.Add(article);
+
+
+            //Записываем новый список в файл
+            var options = new JsonSerializerOptions
             {
-                newsasJson[i] = JsonSerializer.Serialize(news.articles[i]);
-            }
-            Encoding encoding = Encoding.Unicode;
-            File.AppendAllLines(newsDataPath, newsasJson, encoding);
+                WriteIndented = true,
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+            };
+            string jsonArticles = JsonSerializer.Serialize(articles, options);
+
+            File.WriteAllText(newsDataPath, jsonArticles);
         }
     }
     public class Article
     {
         public string title { get; set; }
-        public int id { get; set; }
+        public string id { get; set; }
         public string text { get; set; }
-        public DateTime date { get; set; }
+        public string date { get; set; }
     }
 }
