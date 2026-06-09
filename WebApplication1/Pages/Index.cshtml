@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <title>Лента новостей</title>
 </head>
 
@@ -16,18 +18,63 @@
     </ul>
 </header>
 <body>
-    <main>
-        <h2 class="section_box_title">
-            @Model.Article.title
-        </h2>
-        <!--короче я хуй знает как нужно писать дату, если что поменяешь по нормальному-->
-        <div class="article_date">
-            @Model.Article.date
-        </div>
+    <div class='container'>
+        <div class='grid-layout'>
+            <main>
+                <h2 class="section_box_title">
+                    @Model.Article.title
+                </h2>
+            <!--короче я хуй знает как нужно писать дату, если что поменяешь по нормальному-->
+                <div class="article_date">
+                    @Model.Article.date
+                </div>
 
-        <!--Вроде -->
-        <p class="base_section_text">@Model.Article.text</p>
-        
-    </main>
+            <!--Вроде -->
+                <p class="base_section_text">@Model.Article.text</p>
+            
+            </main>
+            <aside class='sidebar'>
+                <div class="info-card">
+                    <div class="card-icon">📘</div>
+                    <h3>Гайд по AI-инструментам</h3>
+                    <p>Топ-10 расширений для VS Code и Figma, которые ускорят разработку в 2 раза. Бесплатный чек-лист внутри.</p>
+                    <span class="tag">Скачать →</span>
+                </div>
+
+                <!-- Блок 2 -->
+                <div class="info-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Онлайн-курс: нейроинтерфейсы</h3>
+                    <p>Практический интенсив для frontend-специалистов. Научитесь внедрять LLM в веб-приложения за 4 недели.</p>
+                    <span class="tag">Регистрация открыта</span>
+                </div>
+
+                <!-- Блок 3 -->
+                <div class="info-card">
+                    <div class="card-icon">⚡️</div>
+                    <h3>Обновление React 19 + AI</h3>
+                    <p>Новые хуки для интеграции с API нейросетей. Примеры кода и сравнение производительности. </p>
+                    <span class="tag">Читать обзор</span>
+                </div>
+
+                <!-- Блок 4 -->
+                <div class="info-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Исследование: UX и доверие</h3>
+                    <p>Как пользователи относятся к интерфейсам, сгенерированным ИИ? Результаты опроса 1500 респондентов.</p>
+                    <span class="tag">Статистика 2026</span>
+                </div>
+
+                <!-- Блок 5 -->
+                <div class="info-card">
+                    <div class="card-icon">💡</div>
+                    <h3>Совет недели: промпты для дизайна</h3>
+                    <p>Пять эффективных запросов для Midjourney и DALL-E, чтобы генерировать уникальные UI-элементы.</p>
+                    <span class="tag">Полезный шаблон</span>
+                </div>
+            </aside>
+        </div>
+    </div>
+    
 </body>
 </html>
