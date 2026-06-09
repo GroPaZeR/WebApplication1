@@ -55,3 +55,15 @@ li {
     display: inline;
     margin-right: 100px;
 }
+
+textarea {
+    width: 100%;
+    height: 400px;
+    min-width: 100px;
+    max-width: 500px; /* Ограничение для удобства чтения и ввода текста */
+}
+
+input{
+    width: 80%;
+}
+

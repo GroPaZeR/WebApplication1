@@ -1,0 +1,22 @@
+﻿@page
+@model WebApplication1.Pages.AddArticleModel
+
+<html>
+    <head>
+        <title>Заголовок</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <form method="post">
+        @Html.AntiForgeryToken()
+        <h3>Введите название статьи</h3>
+        <input type="text" name="Title" />
+        <h3>Введите текст статьи</h3>
+        <textarea typeof="text", name="Text"></textarea>
+        <h3>Введите дату написания статьи</h3>
+        <input type="text" name="Date" />
+
+        <button type="submit">Отправить</button>
+    </form>
+    </body>
+</html>

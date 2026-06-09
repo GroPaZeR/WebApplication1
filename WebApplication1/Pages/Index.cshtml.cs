@@ -4,14 +4,14 @@ using ClassLibrary;
 public class IndexModel : PageModel
 {
     public Article Article { get; set; }
-
+    public string Title { get; set; }
+    public void OnPost()
+    {
+    }
     public void OnGet()
     {
         News news = new News();
-
-        // загрузка статей...
-
-        news.readArticles();
+        news.ReadArticles();
         Article = news.RandomAricle();
     }
 }
