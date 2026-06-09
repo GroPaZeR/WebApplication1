@@ -1,0 +1,18 @@
+﻿@page
+@model articleModel
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        
+        </title>
+    </head>
+    <body>
+    <h2>@Model.selectedArticle.title</h2>
+    <h4>@Model.selectedArticle.date</h4>
+    <h4>@Model.selectedArticle.theme</h4>
+    <p>@Model.selectedArticle.text</p>
+
+    <a href="/Index"> назад</a>
+    </body>
+</html>

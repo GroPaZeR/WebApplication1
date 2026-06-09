@@ -14,6 +14,8 @@ namespace WebApplication1.Pages
         public string Date { get; set; }
         [BindProperty]
         public string Id { get; set; }
+        [BindProperty]
+        public string Theme { get; set; }
 
         public void OnGet()
         {
@@ -26,7 +28,8 @@ namespace WebApplication1.Pages
                 title = Title,
                 text = Text,
                 date = Date,
-                id = Guid.NewGuid().ToString()
+                id = Guid.NewGuid().ToString(),
+                theme = Theme
             };
 
             News.WriteArticles(getArticle);

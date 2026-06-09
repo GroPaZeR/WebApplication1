@@ -11,6 +11,13 @@
         @Html.AntiForgeryToken()
         <h3>Введите название статьи</h3>
         <input type="text" name="Title" />
+        <h3>Выберите категорию</h3>
+        <select id="theme" name="Theme">
+            <option value="peoples">Люди</option>
+            <option value="auto">Авто</option>
+            <option value="technologies">Технологии</option>
+            <option value="realty">Недвижимость</option>
+        </select>
         <h3>Введите текст статьи</h3>
         <textarea typeof="text", name="Text"></textarea>
         <h3>Введите дату написания статьи</h3>

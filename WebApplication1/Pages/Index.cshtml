@@ -24,53 +24,54 @@
                 <h2 class="section_box_title">
                     @Model.Article.title
                 </h2>
-            <!--короче я хуй знает как нужно писать дату, если что поменяешь по нормальному-->
                 <div class="article_date">
                     @Model.Article.date
                 </div>
+                <div class="article_date">
+                    @Model.Article.theme
+                </div>
 
-            <!--Вроде -->
                 <p class="base_section_text">@Model.Article.text</p>
             
             </main>
             <aside class='sidebar'>
                 <div class="info-card">
-                    <div class="card-icon">📘</div>
-                    <h3>Гайд по AI-инструментам</h3>
-                    <p>Топ-10 расширений для VS Code и Figma, которые ускорят разработку в 2 раза. Бесплатный чек-лист внутри.</p>
-                    <span class="tag">Скачать →</span>
+                    <p>@Model.sideArticles[0].date</p>
+                    <h3>@Model.sideArticles[0].theme</h3>
+                    <h3>@Model.sideArticles[0].title</h3>
+                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
                 </div>
 
                 <!-- Блок 2 -->
                 <div class="info-card">
-                    <div class="card-icon">🎓</div>
-                    <h3>Онлайн-курс: нейроинтерфейсы</h3>
-                    <p>Практический интенсив для frontend-специалистов. Научитесь внедрять LLM в веб-приложения за 4 недели.</p>
-                    <span class="tag">Регистрация открыта</span>
+                    <p>@Model.sideArticles[1].date</p>
+                    <h3>@Model.sideArticles[1].theme</h3>
+                    <h3>@Model.sideArticles[1].title</h3>
+                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
                 </div>
 
                 <!-- Блок 3 -->
                 <div class="info-card">
-                    <div class="card-icon">⚡️</div>
-                    <h3>Обновление React 19 + AI</h3>
-                    <p>Новые хуки для интеграции с API нейросетей. Примеры кода и сравнение производительности. </p>
-                    <span class="tag">Читать обзор</span>
+                    <p>@Model.sideArticles[2].date</p>
+                    <h3>@Model.sideArticles[2].theme</h3>
+                    <h3>@Model.sideArticles[2].title</h3>
+                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
                 </div>
 
                 <!-- Блок 4 -->
                 <div class="info-card">
-                    <div class="card-icon">📊</div>
-                    <h3>Исследование: UX и доверие</h3>
-                    <p>Как пользователи относятся к интерфейсам, сгенерированным ИИ? Результаты опроса 1500 респондентов.</p>
-                    <span class="tag">Статистика 2026</span>
+                    <p>@Model.sideArticles[3].date</p>
+                    <h3>@Model.sideArticles[3].theme</h3>
+                    <h3>@Model.sideArticles[3].title</h3>
+                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
                 </div>
 
                 <!-- Блок 5 -->
                 <div class="info-card">
-                    <div class="card-icon">💡</div>
-                    <h3>Совет недели: промпты для дизайна</h3>
-                    <p>Пять эффективных запросов для Midjourney и DALL-E, чтобы генерировать уникальные UI-элементы.</p>
-                    <span class="tag">Полезный шаблон</span>
+                    <p>@Model.sideArticles[4].date</p>
+                    <h3>@Model.sideArticles[4].theme</h3>
+                    <h3>@Model.sideArticles[4].title</h3>
+                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
                 </div>
             </aside>
         </div>

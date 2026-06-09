@@ -63,5 +63,6 @@ namespace ClassLibrary
         public string id { get; set; }
         public string text { get; set; }
         public string date { get; set; }
+        public string theme { get; set; }
     }
 }
