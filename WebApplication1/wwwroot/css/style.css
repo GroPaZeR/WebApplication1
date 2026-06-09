@@ -1,24 +1,46 @@
 html {
-    font-family: 'Roboto';
+    font-family: 'GillSansC';
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto');
-    src: url('../fonts/Roboto-Regular.eot');
-    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Roboto-Regular.woff') format('woff'),
-    url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-family: 'GillSansCondC';
+    src: local('GillSansCondC');
+    src: url('../fonts/GillSansCondC.eot');
+    src: url('../fonts/GillSansCondC.eot') format('embedded-opentype'),
+    url('../fonts/GillSansCondC.woff') format('woff'),
+    url('../fonts/GillSansCondC.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold.eot');
-    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Roboto-Bold.woff') format('woff'),
-    url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-family: 'GillSansCondC-Bold';
+    src: local('GillSansCondC-Bold');
+    src: url('../fonts/GillSansCondC-Bold.eot');
+    src: url('../fonts/GillSansCondC-Bold.eot') format('embedded-opentype'),
+    url('../fonts/GillSansCondC-Bold.woff') format('woff'),
+    url('../fonts/GillSansCondC-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: local('SourceSansPro-Regular');
+    src: url('../fonts/SourceSansPro-Regular.eot');
+    src: url('../fonts/SourceSansPro-Regular.eot') format('embedded-opentype'),
+    url('../fonts/SourceSansPro-Regular.woff') format('woff'),
+    url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'GillSansC';
+    src: url('../fonts/GillSansC.eot');
+    src: url('../fonts/GillSansC.eot') format('embedded-opentype'),
+    url('../fonts/GillSansC.woff') format('woff'),
+    url('../fonts/ofont.ru_Gill\ Sans.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     }
@@ -37,6 +59,7 @@ body {
 }
 
 .section_box_title {
+    font-family: 'GillSansCondC-Bold';
     font-size: 35px;
     text-align: center;
     margin-left: 10%;
@@ -74,22 +97,45 @@ input{
 
 .article_date {
     font-size: 30px;
-    font-family: 'Roboto-Bold'
+    font-family: 'GillSansCondC-Bold';
 }
 
 /*Каловый блок для Дмитрия */
 .info-card {
             background: #ffffff;
             padding: 1.25rem 1.3rem;
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
             border: 1px solid #edf2f7;
             transition: all 0.2s ease;
         }
 
 .grid-layout {
+            font-family: 'SourceSansPro-Regular';
+            font-weight: 300;
             display: grid;
             grid-template-columns: 1fr 320px;
             gap: 2rem;
             padding: 2rem 2rem 2.5rem 2rem;
         }
 
+.sidebar {
+    font-family: 'GillSansC';
+}
+
+.side_date {
+    margin-bottom:3px;
+}
+
+.side_theme {
+   color: #808080
+}
+
+.side_title {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.article_theme {
+    font-size: 35px;
+    color: #808080
+}

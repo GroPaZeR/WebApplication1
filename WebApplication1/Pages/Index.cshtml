@@ -27,52 +27,29 @@
                 <div class="article_date">
                     @Model.Article.date
                 </div>
-                <div class="article_date">
+                <div class="article_theme">
                     @Model.Article.theme
                 </div>
 
                 <p class="base_section_text">@Model.Article.text</p>
             
             </main>
-            <aside class='sidebar'>
-                <div class="info-card">
-                    <p>@Model.sideArticles[0].date</p>
-                    <h3>@Model.sideArticles[0].theme</h3>
-                    <h3>@Model.sideArticles[0].title</h3>
-                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
-                </div>
-
-                <!-- Блок 2 -->
-                <div class="info-card">
-                    <p>@Model.sideArticles[1].date</p>
-                    <h3>@Model.sideArticles[1].theme</h3>
-                    <h3>@Model.sideArticles[1].title</h3>
-                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
-                </div>
-
-                <!-- Блок 3 -->
-                <div class="info-card">
-                    <p>@Model.sideArticles[2].date</p>
-                    <h3>@Model.sideArticles[2].theme</h3>
-                    <h3>@Model.sideArticles[2].title</h3>
-                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
-                </div>
-
-                <!-- Блок 4 -->
-                <div class="info-card">
-                    <p>@Model.sideArticles[3].date</p>
-                    <h3>@Model.sideArticles[3].theme</h3>
-                    <h3>@Model.sideArticles[3].title</h3>
-                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
-                </div>
-
-                <!-- Блок 5 -->
-                <div class="info-card">
-                    <p>@Model.sideArticles[4].date</p>
-                    <h3>@Model.sideArticles[4].theme</h3>
-                    <h3>@Model.sideArticles[4].title</h3>
-                    <a href="/Article?id=@Model.sideArticles[0].id">Читать дальше</a>
-                </div>
+            <aside class="sidebar">
+                @foreach (var article in Model.sideArticles.Take(5))
+                {
+                    <div class="info-card">
+                        <div class="side_date">
+                            <p>@article.date</p>
+                        </div>
+                        <div class="side_theme">
+                            <h3>@article.theme</h3>
+                        </div>
+                        <div class="side_title">
+                            <h3>@article.title</h3>
+                        </div>
+                        <a href="/Article?id=@article.id">Читать дальше</a>
+                    </div>
+                }
             </aside>
         </div>
     </div>
@@ -80,4 +57,3 @@
 </body>
 </html>
 
-/*зубы*/
