@@ -12,27 +12,32 @@
 
 
 <body>
-    <header>
-        <ul class="login_bottom_box">
-            <li> <a href="/Login">Login</a></li>
-            <li> <a href="/Sign">Sign</a></li>
-            <li> <a href="/AddArticle">Add Article</a></li>
-        </ul>
+    <header class="top_bar">
+        <div class="website_name">
+            <span class="eu">ЕВРО</span><span class="news">НОВОСТИ</span>
+                <ul class="login_bottom_box">
+                    <li> <a href="/Login">Login</a></li>
+                    <li> <a href="/Sign">Sign</a></li>
+                    <li> <a href="/AddArticle">Add Article</a></li>
+                </ul>
+        </div>
     </header>
     <div class='container'>
         <div class='grid-layout'>
             <main>
-                <h2 class="section_box_title">
+                <h2 class="main_article_title">
                     @Model.Article.title
                 </h2>
-                <div class="article_date">
+                <div class="main_article_date">
                     @Model.Article.date
                 </div>
                 <div class="main_article_theme">
                     @Model.Article.theme
                 </div>
 
-                <p class="main_article_text">@Html.Raw(Model.Article.text)</p>
+                <div class="main_article_text">
+                    @Html.Raw(Model.Article.text)
+                </div>
             
             </main>
              <aside class="sidebar">

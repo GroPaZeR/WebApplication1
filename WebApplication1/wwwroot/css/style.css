@@ -58,20 +58,13 @@ body {
             transition: all 0.2s ease;
 }
 
-.section_box_title {
+.main_article_title {
     font-family: 'GillSansCondC-Bold';
     font-size: 35px;
     text-align: center;
     margin-left: 10%;
     margin-right:10%;
-
-}
-
-.base_section_text {
-    text-indent: 30px;
-    text-align: left;
-    font-size: 24px;
-    width: 100%;
+    margin-bottom: 15px;
 }
 
 header {
@@ -93,12 +86,16 @@ li {
     min-height: 600px;
 }
 
-.article_date {
+input {
+    width: 10%;
+}
+
+.main_article_date {
     font-size: 30px;
     font-family: 'GillSansCondC-Bold';
 }
 
-/*Каловый блок для Дмитрия */
+/*Блок из сайдбара */
 .info-card {
             background: #ffffff;
             padding: 1.25rem 1.3rem;
@@ -112,13 +109,9 @@ li {
             font-weight: 300;
             display: grid;
             grid-template-columns: 1fr 320px;
-            gap: 2rem;
+            gap: 2opx;
             padding: 2rem 2rem 2.5rem 2rem;
         }
-
-.sidebar {
-    font-family: 'GillSansC';
-}
 
 .side_date {
     margin-bottom:3px;
@@ -187,4 +180,27 @@ h2{
 }
 .title_input_box{
 
+}
+
+main { 
+    word-wrap: break-word;/* Защита от закрывания картинками сайдбара */
+    padding-right: 30px;
+}
+
+.main_article_text * {
+    max-width: 100%;
+    word-break: break-word; /* Защита от закрывания картинками сайдбара */
+    font-size: 20px;
+     text-indent: 40px;
+}
+
+.main_article_theme {
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #808080;
+    font-family: 'GillSansCondC-Bold';
+}
+
+.sidebar {
+    font-family: 'GillSansC';
 }
