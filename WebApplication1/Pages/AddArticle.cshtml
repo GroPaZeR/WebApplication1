@@ -5,36 +5,55 @@
 <html>
 <head>
         <title>Добавление статьи</title>
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="~/ckeditor/ckeditor.js"></script>
 
     </head>
     <body>
+
+
+    <header class="top_bar">
+        <div class="website_name">
+            <span class="eu">ЕВРО</span><span class="news">НОВОСТИ</span>
+        </div>
+    </header>
+
+
     <form method="post">
         @Html.AntiForgeryToken()
-        <h3>Выберите категорию</h3>
-        <select id="theme" name="Theme">
-            <option value="Люди">Люди</option>
-            <option value="Авто">Авто</option>
-            <option value="Технологии">Технологии</option>
-            <option value="Недвижимость">Недвижимость</option>
-        </select>
+        <div class="add_article_container">
+            <div class="left_block">
+                <h3>Выберите категорию</h3>
+                <select id="theme" name="Theme" >
+                    <option value="" selected disabled hidden></option>
+                    <option value="Люди">Люди</option>
+                    <option value="Авто">Авто</option>
+                    <option value="Технологии">Технологии</option>
+                    <option value="Недвижимость">Недвижимость</option>
+                </select>
+                <h3>Введите дату написания статьи</h3>
+                <input class="date_input_box" type="text" name="Date"/>
 
-        <h3>Введите дату написания статьи</h3>
-        <input type="text" name="Date" />
+                <h3>Введите заголовок статьи</h3>
+                <input class="title_input_box" type="text" name="Title" />
+            </div>
 
-        <h3>Введите заголовок статьи</h3>
-        <input type="text" name="Title" />
-
-        <h3>Введите текст статьи</h3>
-        <div class="ckeditorarea">
-            <textarea id="editor" name="Text"></textarea>
+            <div class="right_block">
+                <h3>Введите текст статьи</h3>
+                <div class="ckeditorarea">
+                    <textarea id="editor" name="Text"></textarea>
+                </div>
+                <script>
+                    CKEDITOR.replace("editor");
+                </script>
+            </div>
         </div>
-        <script>
-            CKEDITOR.replace("editor");
-        </script>
+
+        
+
+        
 
         <button type="submit">Отправить</button>
         <a href="/Index">Назад</a>

@@ -93,10 +93,6 @@ li {
     min-height: 600px;
 }
 
-input {
-    width: 10%;
-}
-
 .article_date {
     font-size: 30px;
     font-family: 'GillSansCondC-Bold';
@@ -145,4 +141,50 @@ input {
 h2{
     font-size:30px;
     text-indent:10px
+}
+
+.top_bar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+    background: #FFFFFF;
+    vertical-align: middle;
+}
+.website_name{
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size:50px;
+    color:white;
+    text-align: center;
+    vertical-align: middle;
+}
+.eu {
+    color: red;
+}
+
+.news {
+    color: darkblue;
+}
+.add_article_container {
+    display: flex;
+    width: 100%;
+}
+
+.left_block {
+    width: 100%;
+    border: 1px solid black;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.right_block {
+    width: 100%;
+    border: 1px solid black;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.date_input_box{
+
+}
+.title_input_box{
+
 }
