@@ -18,6 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ckeditor-full" Version="4.25.1" />
+    <PackageReference Include="ckeditor-standard" Version="4.25.1" />
+    <PackageReference Include="CkeditorForASP.NET" Version="3.6.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
   </ItemGroup>
 

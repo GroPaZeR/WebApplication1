@@ -5,6 +5,8 @@
     <head>
         <title>Заголовок</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="~/ckeditor/ckeditor.js"></script>
+
     </head>
     <body>
     <form method="post">
@@ -19,7 +21,10 @@
             <option value="Недвижимость">Недвижимость</option>
         </select>
         <h3>Введите текст статьи</h3>
-        <textarea typeof="text", name="Text"></textarea>
+        <textarea typeof="text" id="editor" name="Text"></textarea>
+        <script>
+            CKEDITOR.replace("editor");
+        </script>
         <h3>Введите дату написания статьи</h3>
         <input type="text" name="Date" />
 
