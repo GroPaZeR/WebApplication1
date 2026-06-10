@@ -3,15 +3,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
         <title>
-        
+        @Model.selectedArticle.title
         </title>
     </head>
     <body>
-    <h2>@Model.selectedArticle.title</h2>
-    <h4>@Model.selectedArticle.date</h4>
-    <h4>@Model.selectedArticle.theme</h4>
-    <p>@Model.selectedArticle.text</p>
+    <h2 class="section_box_title">
+        @Model.selectedArticle.title
+    </h2>
+    <div class="article_date">
+        @Model.selectedArticle.date
+    </div>
+    <div class="article_theme">
+        @Model.selectedArticle.theme
+    </div>
+    <p class="base_section_text">
+        @Model.selectedArticle.text
+    </p>
 
     <a href="/Index"> назад</a>
     </body>
