@@ -140,6 +140,7 @@ h2{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
     background: #FFFFFF;
     vertical-align: middle;
+    position: relative;
 }
 .website_name{
     padding-top:5px;
@@ -192,6 +193,7 @@ main {
     word-break: break-word; /* Защита от закрывания картинками сайдбара */
     font-size: 20px;
      text-indent: 40px;
+     margin-right: 30px;
 }
 
 .main_article_theme {
@@ -203,4 +205,9 @@ main {
 
 .sidebar {
     font-family: 'GillSansC';
+}
+
+.login_bottom_box {
+    text-align: right;
+    font-size: 30px;
 }
