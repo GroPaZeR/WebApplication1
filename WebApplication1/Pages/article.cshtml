@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
         <title>
         @Model.selectedArticle.title
         </title>
@@ -20,9 +20,7 @@
     <div class="article_theme">
         @Model.selectedArticle.theme
     </div>
-    <p class="base_section_text">
-        @Model.selectedArticle.text
-    </p>
+        @Html.Raw(Model.selectedArticle.text)
 
     <a href="/Index"> назад</a>
     </body>

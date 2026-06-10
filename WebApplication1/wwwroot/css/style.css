@@ -46,7 +46,7 @@ html {
     }
 
 body {
-    width: 100%;
+    font-size: 16px;
 }
 
 .container {
@@ -68,11 +68,10 @@ body {
 }
 
 .base_section_text {
-    text-indent: 20px;
-    margin-left: 3%;
+    text-indent: 30px;
     text-align: left;
     font-size: 24px;
-    width: 90%;
+    width: 100%;
 }
 
 header {
@@ -85,15 +84,17 @@ li {
     margin-right: 100px;
 }
 
-textarea {
-    width: 100%;
-    height: 400px;
-    min-width: 100px;
-    max-width: 500px; /* Ограничение для удобства чтения и ввода текста */
+.ckeditorarea {
+    margin-left: 1.5%;
+    max-width:60%
 }
 
-input{
-    width: 80%;
+.cke_editable {
+    min-height: 600px;
+}
+
+input {
+    width: 10%;
 }
 
 .article_date {
@@ -139,4 +140,9 @@ input{
 .article_theme {
     font-size: 35px;
     color: #808080
+}
+
+h2{
+    font-size:30px;
+    text-indent:10px
 }

@@ -1,18 +1,19 @@
 ﻿@page
 @model WebApplication1.Pages.AddArticleModel
 
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Заголовок</title>
+<head>
+        <title>Добавление статьи</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/normalize.css">
         <script src="~/ckeditor/ckeditor.js"></script>
 
     </head>
     <body>
     <form method="post">
         @Html.AntiForgeryToken()
-        <h3>Введите название статьи</h3>
-        <input type="text" name="Title" />
         <h3>Выберите категорию</h3>
         <select id="theme" name="Theme">
             <option value="Люди">Люди</option>
@@ -20,15 +21,23 @@
             <option value="Технологии">Технологии</option>
             <option value="Недвижимость">Недвижимость</option>
         </select>
-        <h3>Введите текст статьи</h3>
-        <textarea typeof="text" id="editor" name="Text"></textarea>
-        <script>
-            CKEDITOR.replace("editor");
-        </script>
+
         <h3>Введите дату написания статьи</h3>
         <input type="text" name="Date" />
 
+        <h3>Введите заголовок статьи</h3>
+        <input type="text" name="Title" />
+
+        <h3>Введите текст статьи</h3>
+        <div class="ckeditorarea">
+            <textarea id="editor" name="Text"></textarea>
+        </div>
+        <script>
+            CKEDITOR.replace("editor");
+        </script>
+
         <button type="submit">Отправить</button>
+        <a href="/Index">Назад</a>
     </form>
     </body>
 </html>
