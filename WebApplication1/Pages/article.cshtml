@@ -11,17 +11,27 @@
         </title>
     </head>
     <body>
-    <h2 class="section_box_title">
+    <header class="top_bar">
+        <div class="website_name">
+            <span class="eu">ЕВРО</span><span class="news">НОВОСТИ</span>
+        </div>
+    </header>
+
+    <h2 class="main_article_title">
         @Model.selectedArticle.title
     </h2>
-    <div class="article_date">
+    <div class="main_article_datee">
         @Model.selectedArticle.date
     </div>
-    <div class="article_theme">
+    <div class="main_article_theme">
         @Model.selectedArticle.theme
     </div>
+    <div class="main_article_text">
         @Html.Raw(Model.selectedArticle.text)
+    </div>
 
-    <a href="/Index"> назад</a>
+    <div class="universal_button">
+        <a href="/Index" class="universal_button_text"> назад</a>
+    </div>
     </body>
 </html>

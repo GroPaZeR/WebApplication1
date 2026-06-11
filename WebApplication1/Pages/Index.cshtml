@@ -19,18 +19,50 @@
 
         <ul class="login_bottom_box">
             <li class="universal_button">
-                <a href="/Login" class="universal_button_text">Login</a>
+                <a href="/Login" class="universal_button_text">Sign in</a>
             </li>
 
             <li class="universal_button">
-                <a href="/Sign" class="universal_button_text">Sign</a>
+                <a href="/Sign" class="universal_button_text">Sign up</a>
             </li>
 
             <li class="universal_button">
                 <a href="/AddArticle" class="universal_button_text">Add Article</a>
             </li>
         </ul>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
     </header>
+
+    <div id="menu" class="index_left_menu">
+
+        <div class="index_left_menu_button">
+            <a href="/OneCategoryNews?category=Люди" class="index_left_menu_button_text">Люди</a>
+        </div>
+        <div class="index_left_menu_button">
+            <a href="/OneCategoryNews?category=Авто" class="index_left_menu_button_text">Авто</a>
+        </div>
+        <div class="index_left_menu_button">
+            <a href="/OneCategoryNews?category=Технологии" class="index_left_menu_button_text">Технологии</a>
+        </div>
+        <div class="index_left_menu_button">
+            <a href="/OneCategoryNews?category=Недвижимость" class="index_left_menu_button_text">Недвижимость</a>
+        </div>
+        
+    </div>
+
+    <script>
+            function toggleMenu() {
+                const sidebar = document.getElementById("menu");
+
+                if (sidebar.style.display === "block") {
+                    sidebar.style.display = "none";
+                } else {
+                    sidebar.style.display = "block";
+                }
+            }
+    </script>
+
     <div class='container'>
         <div class='grid-layout'>
             <main>
