@@ -58,15 +58,6 @@ body {
             transition: all 0.2s ease;
 }
 
-.main_article_title {
-    font-family: 'GillSansCondC-Bold';
-    font-size: 35px;
-    text-align: center;
-    margin-left: 10%;
-    margin-right:10%;
-    margin-bottom: 15px;
-}
-
 header {
     text-align: right;
     margin-bottom: 20px;
@@ -77,55 +68,6 @@ li {
     margin-right: 100px;
 }
 
-.ckeditorarea {
-    margin-left: 1.5%;
-    max-width:60%
-}
-
-.cke_editable {
-    min-height: 600px;
-}
-
-input {
-    width: 10%;
-}
-
-.main_article_date {
-    font-size: 30px;
-    font-family: 'GillSansCondC-Bold';
-}
-
-/*Блок из сайдбара */
-.info-card {
-            background: #ffffff;
-            padding: 1.25rem 1.3rem;
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
-            border: 1px solid #edf2f7;
-            transition: all 0.2s ease;
-        }
-
-.grid-layout {
-            font-family: 'SourceSansPro-Regular';
-            font-weight: 300;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 2opx;
-            padding: 2rem 2rem 2.5rem 2rem;
-        }
-
-.side_date {
-    margin-bottom:3px;
-}
-
-.side_theme {
-   color: #808080
-}
-
-.side_title {
-    margin-top: 14px;
-    margin-bottom: 14px;
-}
-
 .article_theme {
     font-size: 35px;
     color: #808080
@@ -133,23 +75,106 @@ input {
 
 h2{
     font-size:30px;
-    text-indent:10px
 }
 
+
+
+
+/*Главная статья на главной странице*/
+main { 
+    word-wrap: break-word;
+    padding-right: 30px;
+}
+
+.main_article_title {
+    font-family: 'GillSansCondC-Bold';
+    font-size: 35px;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 10%;
+    margin-bottom: 15px;
+}
+
+.main_article_date {
+    font-size: 20px;
+    font-family: 'SourceSansPro-Regular';
+}
+
+.main_article_text * {
+    max-width: 100%;
+    word-break: break-word;
+    font-size: 20px;
+     text-indent: 40px;
+     margin-right: 30px;
+}
+
+.main_article_theme {
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #808080;
+    font-family: 'GillSansCondC-Bold';
+}
+
+
+/*Сайдбар на главной странице*/
+.sidebar {
+    font-family: 'GillSansC';
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 1.25rem 1.3rem;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
+    border: 1px solid #edf2f7;
+    transition: all 0.2s ease;
+}
+
+.grid-layout {
+    font-family: 'SourceSansPro-Regular';
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2opx;
+    padding: 2rem 2rem 2.5rem 2rem;
+}
+
+.side_date {
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.side_theme {
+    color: #808080
+}
+
+.side_title {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+
+/*Топбар на главной странице*/
 .top_bar {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
     background: #FFFFFF;
     vertical-align: middle;
     position: relative;
 }
-.website_name{
-    padding-top:5px;
-    padding-bottom:5px;
-    font-size:50px;
-    color:white;
+
+.website_name {
+    font-family: 'SourceSansPro-Regular';
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 70px;
+    color: white;
     text-align: center;
     vertical-align: middle;
 }
+
 .eu {
     color: red;
 }
@@ -157,6 +182,21 @@ h2{
 .news {
     color: darkblue;
 }
+
+.login_bottom_box {
+    bottom:10px;
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+
+/*Страница AddArticle*/
 .add_article_container {
     display: flex;
     width: 100%;
@@ -176,38 +216,21 @@ h2{
     box-sizing: border-box;
 }
 
-.date_input_box{
-
-}
-.title_input_box{
-
+.date_input_box {
 }
 
-main { 
-    word-wrap: break-word;/* Защита от закрывания картинками сайдбара */
-    padding-right: 30px;
+.title_input_box {
 }
 
-.main_article_text * {
-    max-width: 100%;
-    word-break: break-word; /* Защита от закрывания картинками сайдбара */
-    font-size: 20px;
-     text-indent: 40px;
-     margin-right: 30px;
+.ckeditorarea {
+    margin-left: 1.5%;
+    max-width: 60%
 }
 
-.main_article_theme {
-    margin-bottom: 15px;
-    font-size: 30px;
-    color: #808080;
-    font-family: 'GillSansCondC-Bold';
+.cke_editable {
+    min-height: 600px;
 }
 
-.sidebar {
-    font-family: 'GillSansC';
-}
-
-.login_bottom_box {
-    text-align: right;
-    font-size: 30px;
+input {
+    width: 10%;
 }
