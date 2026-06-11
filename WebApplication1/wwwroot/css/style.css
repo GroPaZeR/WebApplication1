@@ -203,34 +203,83 @@ main {
 }
 
 .left_block {
-    width: 100%;
+    width: 70%;
     border: 1px solid black;
     min-height: 500px;
     box-sizing: border-box;
 }
 
 .right_block {
-    width: 100%;
+    width: 130%;
     border: 1px solid black;
     min-height: 500px;
     box-sizing: border-box;
 }
 
-.date_input_box {
+.add_article_date_input_box {
+    margin-left: 10px;
+    width:20%;
+    font-size:25px;
+    margin-top:5px;
+    margin-bottom:25px
 }
 
-.title_input_box {
+.add_article_title_input_box {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size:25px;
+    width:65%;
+    height:20%;
+}
+
+.add_articel_select_box {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    width:20%;
+    height:7%;
+    font-size:25px;
+}
+
+.add_article_info_text{
+    margin-left:15px;
+    font-size:30px;
 }
 
 .ckeditorarea {
-    margin-left: 1.5%;
-    max-width: 60%
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 100%;
 }
 
 .cke_editable {
-    min-height: 600px;
 }
 
-input {
-    width: 10%;
+/*универсальные элементы*/
+.universal_button {
+    display: inline-flex; /*добавляет задний фон?*/
+    justify-content: center; /* по горизонтали */
+    align-items: center; /* по вертикали */
+
+    height: 30px;
+    min-width: 110px;
+
+    background-color: #00008B;
+    border-radius: 6px;
+}
+
+.universal_button_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-family: 'SourceSansPro-Regular';
+    padding: 0;
 }

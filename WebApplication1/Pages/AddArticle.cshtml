@@ -24,24 +24,25 @@
     <form method="post">
         @Html.AntiForgeryToken()
         <div class="add_article_container">
+
             <div class="left_block">
-                <h3>Выберите категорию</h3>
-                <select id="theme" name="Theme" >
+                <h3 class="add_article_info_text">Выберите категорию</h3>
+                <select class="add_articel_select_box" id="theme" name="Theme" >
                     <option value="" selected disabled hidden></option>
                     <option value="Люди">Люди</option>
                     <option value="Авто">Авто</option>
                     <option value="Технологии">Технологии</option>
                     <option value="Недвижимость">Недвижимость</option>
                 </select>
-                <h3>Введите дату написания статьи</h3>
-                <input class="date_input_box" type="text" name="Date"/>
+                <h3 class="add_article_info_text">Введите дату написания статьи</h3>
+                <input class="add_article_date_input_box" type="text" name="Date"/>
 
-                <h3>Введите заголовок статьи</h3>
-                <input class="title_input_box" type="text" name="Title" />
+                <h3 class="add_article_info_text">Введите заголовок статьи</h3>
+                <textarea class="add_article_title_input_box" type="text" name="Title"></textarea>
             </div>
 
             <div class="right_block">
-                <h3>Введите текст статьи</h3>
+                <h3 class="add_article_info_text">Введите текст статьи</h3>
                 <div class="ckeditorarea">
                     <textarea id="editor" name="Text"></textarea>
                 </div>
@@ -52,11 +53,12 @@
         </div>
 
         
-
-        
-
         <button type="submit">Отправить</button>
-        <a href="/Index">Назад</a>
+        <br />
+        <div class="universal_button">
+            <a href="/Index" class="universal_button_text">Назад</a>
+        </div>
+
     </form>
     </body>
 </html>
