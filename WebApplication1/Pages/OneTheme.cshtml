@@ -25,6 +25,7 @@
                 @if (Model.Articles[i] != null)
                 {
                     <div class="small_block">
+                        <img src=@Model.Articles[i].articleImage class="card_image"/>
                         <a href="/Article?id=@Model.Articles[i].id" class="all_card_button">
                             @Html.Raw(Model.Articles[i].title);
                         </a>
