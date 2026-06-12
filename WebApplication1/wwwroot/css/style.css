@@ -338,7 +338,8 @@ main {
 .work_chat_gpt {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* заполнить весь блок с сохранением пропорций */
+    object-fit:contain; /* заполнить весь блок с сохранением пропорций */
+    background:black;
     display: block;
 }
 /*универсальные элементы*/
