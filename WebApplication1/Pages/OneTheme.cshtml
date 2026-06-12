@@ -3,9 +3,9 @@
 
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <title>@Model.Theme</title>
 </head>
@@ -20,10 +20,23 @@
 
     <div class="one_theme_main_container">
         @{
-                for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 12; i++)
+            {
+                @if (Model.Articles[i] != null)
                 {
-                    <div class="small_block"></div>
+                    <div class="small_block">
+                        <a href="/Article?id=@Model.Articles[i].id" class="all_card_button">
+                            @Html.Raw(Model.Articles[i].title);
+                        </a>
+                    </div>
                 }
+                else
+                {
+                    <div class="small_block">
+                        <img class="work_chat_gpt" src="~/images/workchatgpt.jpeg">
+                    </div>
+                }
+            }
         }
     </div>
 </body>
