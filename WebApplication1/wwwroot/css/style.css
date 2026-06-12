@@ -237,7 +237,7 @@ main {
 .right_block {
     width: 130%;
     border: 1px solid black;
-    min-height: 6500px;
+    min-height: 650px;
     box-sizing: border-box;
 }
 
