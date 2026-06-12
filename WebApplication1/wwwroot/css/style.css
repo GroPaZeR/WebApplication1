@@ -284,12 +284,16 @@ main {
 
 
 /*Страница OneCategoryNews*/
-.news_category_name{
-    text-align:center;
-    font-size:50px;
-    margin-bottom:20px;
+.news_category_name {
+    font-family: 'SourceSansPro-Regular';
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
-
+.one_theme_main_container {
+    outline: 1px solid grey;
+}
 /*универсальные элементы*/
 /*универсальная ссылка в виде кнопки*/
 .universal_button {
