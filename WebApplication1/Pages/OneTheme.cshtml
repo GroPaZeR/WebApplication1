@@ -1,0 +1,45 @@
+﻿@page
+@model OneThemeModel
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>@Model.Theme</title>
+</head>
+<body>
+    <header class="top_bar">
+        <a href="/Index" class="website_name">
+            <span class="eu">ЕВРО</span><span class="news">НОВОСТИ</span>
+        </a>
+    </header>
+
+    <p class="news_category_name">Самые свежие новости в категории @Model.Theme</p>
+
+    <div class="one_theme_main_container">
+        @{
+            for (int i = 0; i < 12; i++)
+            {
+                @if (Model.Articles[i] != null)
+                {
+                    <div class="small_block">
+                        <img src=@Model.Articles[i].articleImage class="card_image"/>
+                        <a href="/Article?id=@Model.Articles[i].id" class="all_card_button">
+                            @Html.Raw(Model.Articles[i].title);
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="small_block">
+                        <img class="work_chat_gpt" src="~/images/workchatgpt.jpeg">
+                    </div>
+                }
+            }
+        }
+    </div>
+</body>
+</html>
+
